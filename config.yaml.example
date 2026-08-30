@@ -1,0 +1,24 @@
+# Contract-Drift Culprit Finder Configuration
+# Copy to config.yaml and customize
+
+repo_path: "."
+oasdiff_path: "oasdiff"
+
+# Glob patterns to find route handler files
+# The tool searches these files for API path/method references
+route_patterns:
+  - "**/routes/**/*.py"
+  - "**/controllers/**/*.py"
+  - "**/handlers/**/*.py"
+  - "**/api/**/*.py"
+  - "**/views/**/*.py"
+  - "**/endpoints/**/*.py"
+  - "**/routers/**/*.py"
+  - "**/*.py"
+
+# Slack settings (can also use env vars SLACK_BOT_TOKEN, SLACK_CHANNEL)
+slack:
+  enabled: false
+  token: ""
+  channel: ""
+  repo_url: ""
